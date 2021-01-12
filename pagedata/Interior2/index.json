@@ -59,24 +59,20 @@
 		"SliderWrapperHeading": "Features",
 		"SliderColWrapper": [
 			{
-				"SliderImg": "interior2-images/feature-image-1.jpg",
-				"SliderHoverText": "Meridian Coffee Table"
+				"SliderImg": "always-room/open-space.jpg",
+				"SliderHoverText": "Open Space"
 			},
 			{
-				"SliderImg": "interior2-images/feature-image-2.jpg",
-				"SliderHoverText": "Exquisite locks"
+				"SliderImg": "always-room/bar.jpg",
+				"SliderHoverText": "Beautiful Bar"
 			},
 			{
-				"SliderImg": "interior2-images/feature-image-3.jpg",
-				"SliderHoverText": "Handloom holder"
+				"SliderImg": "always-room/bride.jpg",
+				"SliderHoverText": "Bride Room"
 			},
 			{
-				"SliderImg": "interior2-images/feature-image-4.jpg",
-				"SliderHoverText": "Minnelli Sofa"
-			},
-			{
-				"SliderImg": "interior2-images/feature-image-5.jpg",
-				"SliderHoverText": "Latest Wood Fittings"
+				"SliderImg": "always-room/rotunda-wedding.jpg",
+				"SliderHoverText": "Rotunda"
 			}
 		],
 		"PrevImg": "interior2-images/others-left-arrow.svg",

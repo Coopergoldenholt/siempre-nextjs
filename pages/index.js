@@ -20,16 +20,16 @@ const IndexPage = () => (
 		<HeaderMenu />
 		<main>
 			<SEO
-				title="Interior 2 Landing Template | NextJS Templates | Zircon-Next"
-				description="Zircon Interior 2 Landing Page Template from Reactrepo"
+				title="Simepre| Utah Wedding Venue | Coming Soon"
+				description="Siempre is the best up and coming event venue for all high class events. With gorgoues views and drop dead infastructure. Book your next event today!"
 			/>
 			<Banner />
 			<About />
 			<FeaturesSlider />
 			<KeyServices />
-			<Gallery />
+			{/* <Gallery /> */}
 			<Testimonials />
-			<SubscribeLetter />
+			{/* <SubscribeLetter /> */}
 			<Contact />
 		</main>
 		<Footer />

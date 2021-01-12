@@ -13,6 +13,7 @@ import {
 	BannerH4,
 	NextPrev,
 	BannerImage,
+	VideoBtn,
 } from "./banner.style";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -25,6 +26,7 @@ import { Banner } from "../../../pagedata/Interior2";
 class BannerPage extends Component {
 	constructor(props) {
 		super(props);
+		this.state = { showVideo: false };
 		this.next = this.next.bind(this);
 		this.previous = this.previous.bind(this);
 	}
@@ -36,6 +38,9 @@ class BannerPage extends Component {
 	previous() {
 		this.slider.slickPrev();
 	}
+	handleVideoClick = () => {
+		this.setState({ showVideo: !this.state.showVideo });
+	};
 
 	render() {
 		var settings = {
@@ -64,8 +69,12 @@ class BannerPage extends Component {
 			],
 		};
 
+		console.log(this.state.showVideo);
 		return (
-			<BannerSection id="homeContainer">
+			<BannerSection
+				style={this.state.showVideo ? { overflow: "hidden" } : null}
+				id="homeContainer"
+			>
 				<BannerWrapper>
 					<BannerContents>
 						<BannerContentLeft>
@@ -80,7 +89,12 @@ class BannerPage extends Component {
 									breath away as you say... I Do!
 								</BannerPara>
 
-								<BannerBtn href="#">{Banner.BannerBtn}</BannerBtn>
+								<VideoBtn
+									style={{ color: "white" }}
+									onClick={() => this.handleVideoClick()}
+								>
+									Take A Live Tour
+								</VideoBtn>
 							</div>
 						</BannerContentLeft>
 
@@ -115,6 +129,60 @@ class BannerPage extends Component {
 						</BannerContentRight>
 					</BannerContents>
 				</BannerWrapper>
+				{this.state.showVideo ? (
+					<div
+						style={{
+							position: "absolute",
+							top: 0,
+							zIndex: 100000001,
+							height: "100vh",
+							width: "100vw",
+
+							display: "flex",
+							justifyContent: "center",
+							alignItems: "center",
+						}}
+					>
+						<div
+							style={{
+								position: "absolute",
+								top: 0,
+								zIndex: 100000000,
+								height: "100vh",
+								width: "100vw",
+
+								display: "flex",
+								justifyContent: "center",
+								alignItems: "center",
+								backgroundColor: "black",
+								opacity: 0.6,
+							}}
+						></div>
+
+						<img
+							onClick={() => this.handleVideoClick()}
+							style={{
+								position: "absolute",
+								top: 40,
+								right: 40,
+								height: "25px",
+								width: "25px",
+								zIndex: 100000010,
+							}}
+							src={require("../../../assets/other-photos/x-mark-128.png")}
+						/>
+
+						<iframe
+							style={{ zIndex: 100000010 }}
+							width="900"
+							height="500"
+							src="https://www.youtube.com/embed/jtzj8PdOb-U?autoplay=1"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen
+						></iframe>
+					</div>
+				) : null}
 			</BannerSection>
 		);
 	}

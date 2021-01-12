@@ -85,6 +85,12 @@ class FeaturesSliderPage extends Component {
 								<SliderColWrapper>
 									<SliderCol>
 										<SliderImg
+											style={{
+												height: "200px",
+												width: "400px",
+												marginLeft: "auto",
+												marginRight: "auto",
+											}}
 											src={require("../../../assets/" + item.SliderImg)}
 											alt=""
 										/>
